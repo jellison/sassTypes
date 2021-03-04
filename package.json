@@ -1,0 +1,37 @@
+{
+  "name": "sass-types",
+  "version": "1.0.0",
+  "scripts": {
+    "build:types": "tsm src",
+    "build": "npm run build:types && webpack",
+    "format": "prettier -w \"src/**/*.(scss|tsx|ts)\" src/index.html",
+    "start": "npm run build:types && concurrently \"npm:watch:types\" \"npm:start:webpack\"",
+    "start:webpack": "webpack serve",
+    "watch:types": "tsm -w src"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@teamsupercell/typings-for-css-modules-loader": "^2.4.0",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "@types/react-router-dom": "^5.1.7",
+    "concurrently": "^6.0.0",
+    "css-loader": "^5.1.1",
+    "html-webpack-plugin": "^5.2.0",
+    "node-sass": "^5.0.0",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.17",
+    "typed-scss-modules": "^4.1.0",
+    "typescript": "^4.2.2",
+    "webpack": "^5.24.3",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
