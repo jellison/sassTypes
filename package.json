@@ -4,7 +4,7 @@
   "scripts": {
     "build:types": "tsm src",
     "build": "npm run build:types && webpack",
-    "format": "prettier -w \"src/**/*.(scss|tsx|ts)\" src/index.html",
+    "format": "prettier -w \"src/**/*.(scss|tsx|ts|js)\" src/index.html tsconfig.json webpack.config.js",
     "start": "npm run build:types && concurrently \"npm:watch:types\" \"npm:start:webpack\"",
     "start:webpack": "webpack serve",
     "watch:types": "tsm -w src"
